@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sitt ner - Fri Kommunikation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>   
+<body>
+ 
+<div class="menycontainer">   
+<div class="menybubbla"><a href="index.html"><img src="images/logo.png" class="logomeny"></a><img src="images/icons8-menu-50.png" class="hamburgarmeny"></div>    
+<div class="meny">
+    <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+        <li><a href="undersida.html">Våra kunder</a></li>
+        <li><a href="index.html">Inspiration</a></li>
+        <li><a href="index.html">Kontakt</a></li>
+    </ul>
+</div> 
+</div>  
+    
+<div class="mobilbakgrund"></div>    
+<div class="omosssida">    
+<div class="inforad">
+    <div class="sidostolar">
+        <!--<img src="images/stolar.jpg" class="stolar">-->
+    </div>
+    <div class="infoblock">
+        <h2>OM OSS.</h2>
+        <p id="omosstext">Sitt ner. Vi hjälper er att lyssna in, för att nå ut. Nu.
+            <br><br>
+            Vi jobbar med helhet i kommunikation. Varumärkesstrategi, grafisk profil, bildarkiv, film, sociala medier - från första visitkort och skylt till sista filmsnutt på Instagram. Vi vänder oss till företag som vill skaka av mattan, har modet att förnya och förändra, och samtidigt ha roligt under processen.
+            <br><br>
+            Grunden - en fotograf och en formgivare. Färg, form, text och bild möts i en skön blandning. Med en vilja och en lust att klart och tydligt förmedla. Beröra och påverka. Tillsammans med er jobbar vi envist, nyfiket och effektivt fram vad ni vill kommunicera och hur ni vill att omvärlden skall uppfatta ert varumärke. 
+            <br><br>
+            I fjorton år har vi jobbat med kommunikation i nätverk och beroende på era behov så kan vi vara en, två eller flera.
+            <br><br>
+            Rebecca och Frida
+            <br><br>
+            <img src="images/omossbild.jpg"></p> 
+            
+    </div>    
+</div>    
+</div>    
+    
+    
+<footer>
+    <div class="row footer verticalcontainer">
+        <div class="footermeny verticalalign">
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="omoss.html">Om oss</a></li>
+                <li><a href="undersida.html">Våra kunder</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="ikoner">
+            <div class="insta"><a href="#">
+                <img src="images/instagramsvart.png">
+                <div class="overlayinsta">
+                <img src="images/instagramvit.png">
+                </div></a>
+            </div> 
+             <div class="fb"><a href="#">
+                <img src="images/fbsvart.png">
+                <div class="overlayfb">
+                <img src="images/fbvit.png">
+                </div></a>
+            </div> 
+        </div>
+        </div>
+</footer>    
+    
+    
+    
+    
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>     
+    
+<script>
+      /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+              $(this).animate({'opacity':'1', 'margin-top':'0px'},700);
+                    
+            }
+        }); 
+    });
+</script>  
+    
+<script> 
+$(document).ready(function(){
+    $(".menybubbla").click(function(){
+        $(".meny").animate({
+            height: 'toggle',
+            width: 'toggle'
+        });
+    });
+});
+    
+    
+/*Får menyloggan att poppa fram när man scrollat ner 600px*/   
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 400) {
+    $('.logomeny').fadeIn();
+  } else {
+    $('.logomeny').fadeOut();
+  }
+});    
+    
+    
+/*Får menybubblan att ändra storlek när man scrollat ner 100px*/   
+    
+$(document).ready(function(){
+  var scrollTop = 0;
+  $(window).scroll(function(){
+    scrollTop = $(window).scrollTop();
+     
+    
+    if (scrollTop >= 400) {
+      $('.menybubbla').addClass('scrolled-nav');
+    } else if (scrollTop < 400) {
+      $('.menybubbla').removeClass('scrolled-nav');
+    } 
+    
+  }); 
+  
+});  
+    
+    
+</script>    
+    
+</body>
+</html>

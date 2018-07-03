@@ -1,0 +1,651 @@
+/*
+Theme Name: Sittner.nu
+Author: QTE Development
+*/
+/*==============================Grid-systemet=============================*/
+* {
+    box-sizing: border-box;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*------------Generella inställningar---------------*/
+
+html, body {
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+html {
+    margin: 0;
+    font-family: 'Avenir', sans-serif;
+}
+
+/*Verticalcontainer och verticalalign används för att centrera objekt vertikalt i sin parent div*/
+.verticalcontainer {
+    display: table;
+}
+
+.verticalalign {
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+
+/*------------Menyn---------------*/
+
+.menycontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.menybubbla {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: pink;
+    z-index: 500;
+    top: -50px;
+    left: -10px;
+    position: absolute;
+    z-index: 5;
+    -webkit-transition: height .5s, width .5s; /* Safari */
+    transition: height .5s, width .5s, left .5s;
+}
+
+.scrolled-nav {
+    height: 200px !important;
+    width: 200px !important;
+    left: -50px !important; 
+}
+
+.logomeny {
+    position: absolute;
+    width: 40%;
+    bottom: 30%;
+    right: 25%;
+    display: none;
+}
+
+.hamburgarmeny {
+    position: absolute;
+    width: 20px;
+    right: 40%;
+    bottom: 15%;
+    cursor: pointer;
+}
+
+.meny {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #d68b9f;
+    top: -10px;
+    left: -20px;
+    position: absolute;
+    opacity: 0.95;
+    display: none;
+}
+
+.meny ul {
+    display: inline;
+    text-transform: uppercase;
+    text-align: center;
+    list-style-type: none;
+    position: absolute;
+    top: 100px;
+    margin-left: 25%;
+}
+
+.meny li {
+    margin-bottom: 20px;
+    font-size: 110%;
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.meny a {
+    color: white;
+    text-decoration: none;
+}
+
+.meny li:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------Startbilden---------------*/
+
+.startbild {
+    width: 100%;
+    height: 600px;
+}
+
+.logo img {
+    margin-left: 5%;
+    margin-top: 200px;
+    width: 20%;
+    position: absolute;
+    top: 0;
+}
+
+/* Test slumpad bild---------------*/
+
+#banner-load {
+    height: 600px;
+    overflow: hidden;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+}
+
+#banner-load img {
+    min-width: 200px;
+    width: 26%;
+}
+
+
+/*------------Kundraden---------------*/
+
+.kunder {
+    background-color: #eee;
+    width: 100%;
+    padding: 50px 5% 10px 5%;
+}
+
+.kundcase {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.kundbubblavideo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+}
+
+.kundbubblavideo video {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.kundbubbla {
+    width: 70%;
+    height: auto;
+    padding-top: 70%;
+    border-radius: 50%;
+    margin: auto;
+    background-position: center;   
+}
+
+.kundbubbla1 {
+    background-image: url(images/bild1.jpg);
+}
+
+.kundbubbla2 {
+    background-image: url(kunder/Convenium_logo.svg);
+}
+
+.kundbubbla3 {
+    background-image: url(kunder/M%C3%A4klarg%C3%A5rden_logo.svg);
+}
+
+.kundbubbla4 {
+    background-image: url(kunder/Karlaby%20Kro_logo.svg);
+}
+
+.kundcase h3, .kundcase p {
+ padding: 0 20%;   
+}
+
+.kundcase h3 {
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+
+/*------------Row---------------*/
+
+.inforad {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.sidostolar {
+    width: 30%;
+    float: left;
+    position: relative;
+    height: 1500px;
+    overflow: hidden;
+    margin-top: 10px;
+    background-image: url(images/stolar.jpg);
+    background-repeat: repeat-y;
+}
+
+/*
+.sidostolar {
+    width: 30%;
+    float: left;
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.sidostolar img {
+    height: 1200px;
+    position: absolute;
+    top: -100px;
+    right: 0;
+}*/
+
+.infoblock {
+    width: 70%;
+    float: left;
+}
+
+.enrad {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    clear: both;
+}
+
+.hideme{
+    opacity:0;
+    margin-top: 500px;
+}
+
+.text {
+    width: 90%;
+    padding: 0 0 0 10%;
+    float: left;
+    line-height: 1.5;
+}
+
+.infoblock h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-size: 200%;
+}
+
+.infoblock p {
+    font-weight: 200;
+    font-size: 100%;
+    margin-top: 10px;
+}
+
+.rundabilden {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    margin-right: 10%;
+}
+
+.rundabilden img {
+    width: 100%;
+}
+
+.infoblock a {
+    color: black;
+    text-decoration: none;
+}
+
+/*------------Footer---------------*/
+
+.footer {
+    clear: both;
+    height: 70px;
+    background-color: #d68b9f;
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+}
+
+.footermeny ul {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 500;
+}
+
+.footermeny li {
+    float: left;
+    display: inline;
+    padding-right: 20px;
+    color: black;
+}
+
+.footermeny a {
+    color: black;
+    text-decoration: none;
+}
+
+.footermeny a:hover {
+    color: white;
+}
+
+
+
+
+.ikoner {
+    margin-top: 20px;
+    margin-right: 20%;
+}
+
+.fb, .insta {
+    position: relative;
+    width: 30px;
+    float: right;
+    margin-right: 5px;
+}
+
+.fb img, .insta img {
+  display: block;
+  width: 30px;
+  height: auto;
+    border-radius: 10%;
+}
+
+.overlayfb, .overlayinsta {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.fb:hover .overlayfb, .insta:hover .overlayinsta {
+  opacity: 1;
+}
+
+
+
+
+/*------------Undersidor---------------*/
+
+.undersida .infoblock, .omosssida .infoblock {
+    margin-top: 100px;
+}
+
+.kundrad {
+    height: auto;
+    clear: both;
+}
+
+.caseruta {
+    width: 50%;
+    padding-top: 30px;
+    float: left;
+    margin-bottom: 100px;
+}
+
+.casebubbla {
+    width: 50%;
+    height: auto;
+    padding-top: 50%;
+    border-radius: 50%;
+    margin: 0 15%;
+    background-color: pink;
+    background-position: center;
+}
+
+.brollop {
+    background-image: url(kunder/Brolloposterlen_logo.svg);
+}
+
+.convenium {
+    background-image: url(kunder/Convenium_logo.svg);
+}
+
+.frideborg {
+    background-image: url(kunder/Frideborg_logo.svg);
+}
+
+.karlaby {
+    background-image: url(kunder/Karlaby%20Kro_logo.svg);
+}
+
+.martenpers {
+    background-image: url(kunder/MartenPers_logo.svg);
+}
+
+.maklargarden {
+    background-image: url(kunder/M%C3%A4klarg%C3%A5rden_logo.svg);
+}
+
+.polykemi {
+    background-image: url(kunder/Polykemi_logo.svg);
+}
+
+.qverrestad {
+    background-image: url(kunder/Qverrestad_logo.svg);
+}
+
+.stangsel {
+    background-image: url(kunder/St%C3%A4ngselfabriken_logo.svg);
+}
+
+.yo {
+    background-image: url(kunder/YO_revision_logo.svg);
+}
+
+.okrab {
+    background-image: url(kunder/%C3%96krab_logo.svg);
+}
+
+.caseruta h4, .caseruta p {
+    padding: 0 5% 0 15%;
+    margin: 0;
+    font-size: 80%;
+}
+
+.caseruta h4 {
+    margin-top: 20px;
+}
+
+.undersida h2, .omosssida h2 {
+    padding-left: 7%;
+}
+
+.undersida .sidostolar {
+    height: 2700px;
+}
+
+.omosssida .sidostolar {
+    height: 1300px;
+}
+
+#omosstext {
+    padding: 0 30% 0 7%;
+}
+
+
+
+
+
+
+/*==========================================MEDIA QUERIES=============================================*/
+/*==========================================MEDIA QUERIES=============================================*/
+/*==========================================MEDIA QUERIES=============================================*/
+
+
+@media only screen and (max-width: 1100px) {   
+    
+    #banner-load,
+    .startbild {
+        height: 500px;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) { 
+
+    #banner-load img {
+        min-width: 140px;
+        width: 26%;
+    }
+
+    #banner-load,
+    .startbild {
+        height: 400px;
+    }    
+
+    .startbild {
+        background-attachment: scroll;
+    }
+    
+    .kunder {
+        display: none;
+    }
+    
+    .mobilbakgrundstartsida {
+        background-image: url(images/stolar.jpg);
+        height: 2500px;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150%;
+        z-index: -1;
+    }
+    
+    .enrad {
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+    
+    .text {
+        width: 100%;
+        padding: 0 0 0 10%;
+    }
+    
+    .infoblock .verticalalign {
+        width: 100%;
+        float: left;
+    }
+    
+    .rundabilden {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-top: 30px;
+    }
+    
+    .text {
+        padding: 0;
+    }
+    
+    .infoblock {
+        width: 100%;
+        opacity: 1;
+    }
+    
+    .infoblock h2 {
+        padding: 0;
+        margin-top: 100px;
+    }
+    
+    #omosstext {
+        padding: 0;
+    }
+    
+    .omosssida img {
+        width: 100%;
+    }
+    
+    .sidostolar {
+        display: none;
+    }
+    
+    .mobilbakgrund {
+        background-image: url(images/stolar.jpg);
+        height: 1200px;
+        opacity: 0.1;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    #workbakgrund {
+        height: 4400px;
+    }
+    
+    .caseruta {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .casebubbla {
+        width: 80%;
+        padding-top: 80%;
+        margin: 0%;
+        margin: auto;
+    }
+
+    .caseruta h4, .caseruta p {
+        padding: 0 5%;
+        text-align: center;
+    }
+    
+    
+    
+    .footer {
+        height: 170px;
+    }
+    
+    .footermeny li {
+        float: none;
+        display: block;
+    }
+ 
+    .footer ul {
+        padding: 7%;
+        line-height: 2;
+    }
+    
+    .fb, .insta {
+        float: none;
+        margin-bottom: 10px;
+        margin-right: -10px;
+    }
+    
+}
