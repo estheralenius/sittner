@@ -52,7 +52,7 @@ html {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: pink;
+    background-color: #00ff00;
     z-index: 500;
     top: -50px;
     left: -10px;
