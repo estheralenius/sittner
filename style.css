@@ -158,7 +158,7 @@ html {
     overflow: hidden;
     z-index: -1;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     padding: 3rem;
 }
 
